@@ -7,6 +7,7 @@ public class AndroidCaller : MonoBehaviour
     private const float FontSizeMult = 0.04f;
     private string mDebugText = "";
     public GUISkin menuSkin;
+    public string productName;
 
     private void debugLog(String log)
     {
@@ -39,21 +40,8 @@ public class AndroidCaller : MonoBehaviour
     //method that calls our native plugin.
     public void ShowEnviroment()
     {
-
-
-#if UNITY_ANDROID
-        //somew fields and functions used for Android only
-        debugLog("Build ANDROID");
-        string buildTargetGroup = "";//PlayerSettings.GetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android);
-        debugLog("buildTargetGroup: " + buildTargetGroup);
-#endif
-
-#if UNITY_IOS
-        //somew fields and functions used for Android only
-        debugLog("Build IOS");
-        string buildTargetGroup = "";//PlayerSettings.GetScriptingDefineSymbolsForGroup(BuildTargetGroup.iOS);
-        debugLog("buildTargetGroup: " + buildTargetGroup);
-#endif
-
+        productName = Application.productName;
+        debugLog("Build");
+        debugLog("productName: " + productName);
     }
 }

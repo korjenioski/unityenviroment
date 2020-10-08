@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Oct 07 19:51:10 BRT 2020
+#Thu Oct 08 00:09:07 BRT 2020
 60.set=ASSET
 52.set=ASSET
 53.base=/Users/marcelokorjenioski/Documents/unity/unityenviroment/MessageUnity/Temp/gradleOut/launcher/build/intermediates/transforms/mergeJniLibs/release/0

@@ -33,7 +33,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('/Users/marcelokorjenioski/Documents/android/whatsapp-messager-sender/Unity/Document/keystore.keystore')
+            storeFile file('/Users/marcelokorjenioski/Documents/unity/unityenviroment/Document/keystore.keystore')
             storePassword '123456'
             keyAlias 'message'
             keyPassword '123456'

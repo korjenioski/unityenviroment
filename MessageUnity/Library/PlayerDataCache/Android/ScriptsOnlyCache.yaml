@@ -299,7 +299,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: 446923f6925d6467c786361373bcfcbc
+      Hash: 4d0b725c753d646e2f6f38d104e51297
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AndroidCaller
@@ -528,4 +528,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/marcelokorjenioski/Documents/unity/unityenviroment/MessageUnity/AndroidProdBuild.apk
+  playerPath: /Users/marcelokorjenioski/Documents/unity/unityenviroment/MessageUnity/AndroidDevBuild.apk

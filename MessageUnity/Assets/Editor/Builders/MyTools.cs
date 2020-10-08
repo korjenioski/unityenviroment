@@ -1,6 +1,9 @@
 ﻿using UnityEditor;
 using System.Diagnostics;
 using UnityEngine;
+using System.Linq;
+using System.IO;
+using System.Collections.Generic;
 
 public class ScriptBatch
 {
@@ -10,10 +13,20 @@ public class ScriptBatch
         // ... your code here, validations, flag changes, etc.
         PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android, "prod");
 
+        PlayerSettings.productName = "BuildAndroidGameDev";
+        PlayerSettings.companyName = "Phaneronsoft";
+
+        PlayerSettings.Android.bundleVersionCode = 1;
+        PlayerSettings.Android.keyaliasName = "message";
+        PlayerSettings.Android.keyaliasPass = "123456";
+        PlayerSettings.Android.keystorePass = "123456";
+        PlayerSettings.Android.keystoreName = Path.GetFullPath(@"/Users/marcelokorjenioski/Documents/unity/unityenviroment/Document/keystore.keystore").Replace('\\', '/');
+
+
         // Build the player.
         BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions();
         buildPlayerOptions.scenes = new[] { "Assets/Scenes/SampleScene.unity" };
-        buildPlayerOptions.locationPathName = "AndroidProdBuild.apk";
+        buildPlayerOptions.locationPathName = "AndroidDevBuild.apk";
         buildPlayerOptions.target = BuildTarget.Android;
         buildPlayerOptions.options = BuildOptions.None;
         BuildPipeline.BuildPlayer(buildPlayerOptions);
@@ -28,7 +41,7 @@ public class ScriptBatch
         // Build the player.
         BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions();
         buildPlayerOptions.scenes = new[] { "Assets/Scenes/SampleScene.unity" };
-        buildPlayerOptions.locationPathName = "iOSBuild";
+        buildPlayerOptions.locationPathName = "iOSDevBuild.ipa";
         buildPlayerOptions.target = BuildTarget.iOS;
         buildPlayerOptions.options = BuildOptions.None;
         BuildPipeline.BuildPlayer(buildPlayerOptions);
@@ -39,6 +52,13 @@ public class ScriptBatch
     {
         // ... your code here, validations, flag changes, etc.
         PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android, "prod");
+
+        PlayerSettings.Android.bundleVersionCode = 1;
+        PlayerSettings.Android.keyaliasName = "message";
+        PlayerSettings.Android.keyaliasPass = "123456";
+        PlayerSettings.Android.keystorePass = "123456";
+        PlayerSettings.Android.keystoreName = Path.GetFullPath(@"/Users/marcelokorjenioski/Documents/unity/unityenviroment/Document/keystore.keystore").Replace('\\', '/');
+
 
         // Build the player.
         BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions();
@@ -58,7 +78,7 @@ public class ScriptBatch
         // Build the player.
         BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions();
         buildPlayerOptions.scenes = new[] { "Assets/Scenes/SampleScene.unity" };
-        buildPlayerOptions.locationPathName = "iOSBuild";
+        buildPlayerOptions.locationPathName = "iOSProdBuild.ipa";
         buildPlayerOptions.target = BuildTarget.iOS;
         buildPlayerOptions.options = BuildOptions.None;
         BuildPipeline.BuildPlayer(buildPlayerOptions);
