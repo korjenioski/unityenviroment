@@ -1,4 +1,0 @@
-#Thu Oct 08 00:09:07 BRT 2020
-base.0=/Users/marcelokorjenioski/Documents/unity/unityenviroment/MessageUnity/Temp/gradleOut/launcher/build/intermediates/transforms/dexMerger/release/0
-path.0=classes.dex
-renamed.0=classes.dex
